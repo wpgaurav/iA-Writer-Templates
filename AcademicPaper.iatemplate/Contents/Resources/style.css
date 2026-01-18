@@ -1,0 +1,342 @@
+/* Academic Paper Template - STIX Two Font */
+
+* {
+	box-sizing: border-box;
+}
+
+/* Base Typography */
+:root {
+	--serif-font: "STIX Two Text", serif;
+	--body-color: #1a1a1a;
+	--text-muted: #555555;
+	--border-color: #d0d0d0;
+	--light-bg: #fafafa;
+	--line-height: 1.8;
+	--base-size: 11pt;
+}
+
+body {
+	font-family: var(--serif-font);
+	font-size: var(--base-size);
+	line-height: var(--line-height);
+	color: var(--body-color);
+	background: white;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+}
+
+/* Page Setup */
+body[data-document] {
+	padding: 1in;
+	max-width: 8.5in;
+	margin: 0 auto;
+}
+
+body[data-title] {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2in 1.5in;
+	text-align: center;
+}
+
+body[data-header],
+body[data-footer] {
+	padding: 0.5in 1in;
+	font-size: 10pt;
+	color: var(--text-muted);
+	border-bottom: 1px solid var(--border-color);
+}
+
+body[data-footer] {
+	border-top: 1px solid var(--border-color);
+	border-bottom: none;
+}
+
+/* Headings */
+h1 {
+	font-size: 24pt;
+	font-weight: 700;
+	margin: 1.5em 0 0.5em 0;
+	line-height: 1.4;
+	color: var(--body-color);
+	page-break-after: avoid;
+}
+
+h2 {
+	font-size: 16pt;
+	font-weight: 700;
+	margin: 1.3em 0 0.4em 0;
+	line-height: 1.4;
+	color: var(--body-color);
+	page-break-after: avoid;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 0.3em;
+}
+
+h3 {
+	font-size: 13pt;
+	font-weight: 700;
+	margin: 1.2em 0 0.3em 0;
+	line-height: 1.4;
+	color: var(--body-color);
+	page-break-after: avoid;
+}
+
+h4 {
+	font-size: 11pt;
+	font-weight: 600;
+	margin: 1em 0 0.2em 0;
+	line-height: 1.4;
+	color: var(--body-color);
+	page-break-after: avoid;
+}
+
+h5 {
+	font-size: 11pt;
+	font-weight: 600;
+	font-style: italic;
+	margin: 0.9em 0 0.2em 0;
+	line-height: 1.4;
+	color: var(--body-color);
+	page-break-after: avoid;
+}
+
+h6 {
+	font-size: 10pt;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin: 0.8em 0 0.2em 0;
+	line-height: 1.4;
+	color: var(--text-muted);
+	page-break-after: avoid;
+}
+
+/* Paragraphs and Text Flow */
+p {
+	margin: 0 0 1em 0;
+	text-align: justify;
+}
+
+p.title {
+	font-size: 28pt;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+	text-align: center;
+	color: var(--body-color);
+}
+
+p.subtitle {
+	font-size: 14pt;
+	font-style: italic;
+	margin-bottom: 1em;
+	text-align: center;
+	color: var(--text-muted);
+}
+
+p.author {
+	font-size: 11pt;
+	text-align: center;
+	margin-bottom: 0.5em;
+	color: var(--text-muted);
+}
+
+p.date {
+	font-size: 10pt;
+	text-align: center;
+	margin-bottom: 2em;
+	color: var(--text-muted);
+}
+
+/* Lists */
+ul, ol {
+	margin: 1em 0;
+	padding-left: 2em;
+}
+
+li {
+	margin: 0.5em 0;
+	line-height: var(--line-height);
+}
+
+ul li {
+	list-style-type: disc;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+/* Code and Preformatted Text */
+code {
+	font-family: "Menlo", "Monaco", "Courier New", monospace;
+	font-size: 9.5pt;
+	background-color: var(--light-bg);
+	padding: 0.2em 0.4em;
+	border-radius: 2px;
+	color: #c7254e;
+}
+
+pre {
+	background-color: var(--light-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 3px;
+	padding: 1em;
+	overflow-x: auto;
+	margin: 1em 0;
+	font-family: "Menlo", "Monaco", "Courier New", monospace;
+	font-size: 9pt;
+	line-height: 1.4;
+}
+
+pre code {
+	background-color: transparent;
+	padding: 0;
+	color: inherit;
+}
+
+/* Blockquotes */
+blockquote {
+	margin: 1.5em 0;
+	padding-left: 1em;
+	border-left: 3px solid var(--border-color);
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+blockquote p {
+	margin: 0.5em 0;
+	text-align: left;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1.5em 0;
+	font-size: 10pt;
+}
+
+thead {
+	background-color: var(--light-bg);
+	font-weight: 600;
+}
+
+th, td {
+	border: 1px solid var(--border-color);
+	padding: 0.6em;
+	text-align: left;
+	line-height: 1.5;
+}
+
+th {
+	font-weight: 700;
+	background-color: var(--light-bg);
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--light-bg);
+}
+
+/* Links */
+a {
+	color: #0066cc;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 102, 204, 0.3);
+}
+
+a:hover {
+	color: #0052a3;
+	border-bottom-color: #0052a3;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 1em 0;
+	border: 1px solid var(--border-color);
+	border-radius: 2px;
+}
+
+/* Horizontal Rules */
+hr {
+	border: none;
+	border-top: 1px solid var(--border-color);
+	margin: 2em 0;
+	height: 0;
+}
+
+/* Emphasis */
+strong {
+	font-weight: 700;
+}
+
+em, i {
+	font-style: italic;
+}
+
+del {
+	text-decoration: line-through;
+	color: var(--text-muted);
+}
+
+/* Title Page Specific */
+body.title-page {
+	text-align: center;
+}
+
+body.title-page h1 {
+	margin: 0 0 1em 0;
+	font-size: 32pt;
+}
+
+body.title-page h2 {
+	border: none;
+	padding-bottom: 0;
+	font-size: 18pt;
+	font-weight: 400;
+	margin: 1em 0 3em 0;
+	color: var(--text-muted);
+}
+
+body.title-page p {
+	text-align: center;
+}
+
+/* Print Styles */
+@media print {
+	body[data-document] {
+		padding: 0;
+		margin: 0;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+	}
+	
+	p {
+		orphans: 3;
+		widows: 3;
+	}
+	
+	ul, ol {
+		page-break-inside: avoid;
+	}
+	
+	img {
+		page-break-inside: avoid;
+	}
+	
+	a {
+		border: none;
+		color: #000;
+	}
+}
